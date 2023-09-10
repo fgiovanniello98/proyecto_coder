@@ -1,0 +1,54 @@
+@mixin gridContenedor {
+  display: grid;
+  grid-template-columns: 42% 42% 15%;
+  grid-template-rows: 14% 67% 18%;
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+}
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}
+
+@mixin wpp {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+}
+
+@mixin imgPubli {
+  width: 200px;
+  height: 550px;
+  margin-top: 150px;
+}
+
+@mixin descuentos {
+  font-size: 15px;
+  margin-top: 35px;
+}
+
+@mixin gridMain {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+}
+main {
+  grid-area: main;
+}
+
+@mixin footer {
+  background-color: nth($color, 3);
+  padding-left: 10px;
+}

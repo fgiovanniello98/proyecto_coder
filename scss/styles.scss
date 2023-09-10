@@ -1,0 +1,117 @@
+@import "utilidades/variables";
+@import "utilidades/listas";
+@import "utilidades/mixin";
+@import "utilidades/extend";
+
+html {
+  font-size: 62, 5%;
+}
+
+// Cuerpo del sitio
+body {
+  background-color: $color-fondo;
+  color: $color-letra;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  padding: 20px;
+  background-color: tomato;
+}
+
+// Navegador
+nav {
+  background-color: yellowgreen;
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 20px;
+      margin-left: 20px;
+      font-size: 18px;
+      a {
+        text-decoration: none;
+        &:hover {
+          color: nth($color, 2);
+          border: 4px solid black;
+        }
+      }
+    }
+  }
+}
+a:hover {
+  color: nth($color, 2);
+  border: 4px solid black;
+}
+
+//Titulo del main
+h2 {
+  display: flex;
+  justify-content: center;
+  color: nth($color, 1);
+  border: 3px double blue;
+  font-size: 40px;
+}
+
+// Forma del sitio
+.contenedor {
+  @include gridContenedor;
+}
+
+// Formato icono de wpp
+.wpp {
+  @include wpp;
+}
+
+// Formato Publicidad
+.imPubli {
+  @include imgPubli;
+}
+
+.descuentos {
+  @include descuentos;
+}
+
+.contenedorMain {
+  @include gridMain;
+}
+
+.linkUno,
+.linkDos,
+.linkTres,
+.linkPubli {
+  @extend %links;
+}
+.imUno,
+.imDos,
+.imTres {
+  @extend %imagen;
+}
+
+.footer {
+  @include footer;
+}
+
+.imgCoci {
+  @extend %imagen;
+}
+
+@media screen and (min-width: 300px) {
+  .contenedor {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+  header {
+    grid-area: header;
+  }
+  main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
+}
