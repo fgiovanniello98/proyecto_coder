@@ -1,7 +1,7 @@
 @mixin gridContenedor {
   display: grid;
   grid-template-columns: 42% 42% 15%;
-  grid-template-rows: 14% 67% 18%;
+  grid-template-rows: auto;
   grid-template-areas:
     "header header header"
     "main main aside"
@@ -22,10 +22,10 @@ footer {
 
 @mixin wpp {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-  width: 60px;
-  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 @mixin imgPubli {
@@ -49,6 +49,6 @@ main {
 }
 
 @mixin footer {
-  background-color: nth($color, 3);
   padding-left: 10px;
+  padding-bottom: 10px;
 }

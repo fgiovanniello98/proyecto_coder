@@ -1,0 +1,9 @@
+// Formato icono de wpp
+.wpp {
+  @include wpp;
+}
+
+.footer {
+  @include footer;
+  background-color: aliceblue;
+}

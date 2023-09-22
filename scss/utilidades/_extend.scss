@@ -1,17 +1,23 @@
-%imagenes {
-  object-fit: none;
-}
-
 %imagen {
-  width: 150px;
-  height: 250px;
-  margin-top: 40px;
+  width: 65%;
+  height: 70%;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 %links {
   font-size: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   margin-top: 5px;
-  display: block;
-  justify-content: top;
+  margin-left: 10px;
+  display: flex;
+
+  align-items: center;
+}
+
+%hover {
+  a:hover {
+    color: nth($color, 2);
+    border: 2px solid rgb(122, 71, 71);
+  }
 }

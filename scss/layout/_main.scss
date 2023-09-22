@@ -1,0 +1,38 @@
+//Titulo del main
+h2 {
+  display: flex;
+  justify-content: center;
+  color: nth($color, 1);
+  border: 3px double blue;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+// Forma del sitio
+.contenedor {
+  @include gridContenedor;
+}
+
+.contenedorMain {
+  @include gridMain;
+}
+
+.linkUno,
+.linkDos,
+.linkTres,
+.linkPubli {
+  @extend %links;
+}
+.imUno,
+.imDos,
+.imTres {
+  @extend %imagen;
+}
+
+.imgCoci {
+  @extend %imagen;
+}
+
+main {
+  @extend %hover;
+}
